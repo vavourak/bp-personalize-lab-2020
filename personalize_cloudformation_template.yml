@@ -40,7 +40,7 @@ Resources:
   NotebookInstance:
     Type: "AWS::SageMaker::NotebookInstance"
     Properties:
-      InstanceType: "ml.t2.medium"
+      InstanceType: "ml.t3.medium"
       NotebookInstanceName: !Ref NotebookName
       RoleArn: !GetAtt PersonalizeRoleForLab.Arn
       VolumeSizeInGB: !Ref VolumeSize
