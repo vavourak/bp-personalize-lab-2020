@@ -6,14 +6,6 @@ Parameters:
     Default: PersonalizeDemoLab
     Description: Enter the name of the SageMaker notebook instance. Deafault is PersonalizeDemoLab.
 
-  VolumeSize:
-    Type: Number
-    Default: 10
-    MinValue: 5
-    MaxValue: 16384
-    ConstraintDescription: Must be an integer between 5 (GB) and 16384 (16 TB).
-    Description: Enter the size of the EBS volume in GB.
-
 
 Resources:
 
@@ -43,5 +35,4 @@ Resources:
       InstanceType: "ml.t3.medium"
       NotebookInstanceName: !Ref NotebookName
       RoleArn: !GetAtt PersonalizeRoleForLab.Arn
-      VolumeSizeInGB: !Ref VolumeSize
       DefaultCodeRepository: https://github.com/vavourak/bp-personalize-lab-2020.git
